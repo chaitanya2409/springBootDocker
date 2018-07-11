@@ -1,0 +1,29 @@
+devServers: localhost
+unauthorized.url.redirect:  https://localhost:8080
+debug: false
+security:
+  user:
+    password: none
+zuul:
+  routes:
+    home:
+      path: /**
+    Service1:
+      path: /Service1/**
+      url: http://localhost:8081
+      stripPrefix: false
+    Service2:
+      path: /Service2/**
+      url: http://localhost:8082
+      stripPrefix: false
+    Service3:
+      path: /Service3/**
+      url: http://localhost:8083
+      stripPrefix: false
+    Service4:
+      path: /Service4/**
+      url: http://localhost:8084
+      stripPrefix: false
+      
+server.contextPath: /b2b2
+server.port: 8085
